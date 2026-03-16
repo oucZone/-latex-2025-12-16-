@@ -464,14 +464,23 @@
 
 
 
-% 自定义图标题格式
-\newcommand{\figurecaption}[2]{%
+%% 自定义图标题格式
+%\newcommand{\figurecaption}[2]{%
+%    % \vspace{4pt} 
+%    \caption[#1]{%
+%        \centering \quad #1 \\[6pt] % 在中文和英文之间增加6pt的垂直间距
+%        \centering \textnormal{Fig.}~\thefigure\quad #2
+%    }
+%}
+
+% 自定义图标题格式—新增一个目录括号，解决
+\newcommand{\figurecaption}[3]{%
     % \vspace{4pt} 
     \caption[#1]{%
-        \centering \quad #1 \\[6pt] % 在中文和英文之间增加6pt的垂直间距
-        \centering \textnormal{Fig.}~\thefigure\quad #2
+        \centering \quad #2 \\[6pt] % 在中文和英文之间增加6pt的垂直间距
+        \centering \textnormal{Fig.}~\thefigure\quad #3
     }
-}
+
 
 % 自定义表格标题格式
 \newcommand{\tablecaption}[2]{%
