@@ -480,7 +480,7 @@
         \centering \quad #2 \\[6pt] % 在中文和英文之间增加6pt的垂直间距
         \centering \textnormal{Fig.}~\thefigure\quad #3
     }
-
+}
 
 % 自定义表格标题格式
 \newcommand{\tablecaption}[2]{%
