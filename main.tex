@@ -30,7 +30,12 @@
  \usepackage{array} 
 \usepackage{notoccite}  % 忽略目录等部分的引用，解决图表标题中引用参考文献，导致参考文献乱序
 \usepackage{seqsplit}  % 解决“长英文导致不分行，超出页面”的问题,使用\seqsplit{}将长英文包括进去即可。
- 
+
+\usepackage[bicaption,lists]{bicaption} % 解决图标题中引用的参考文献在插图清单中显示的问题
+\captionsetup[figure][bi-first]{name=图,list=yes,justification=centering,labelsep=quad,skip=4pt}  % 中文标题进入目录
+\captionsetup[figure][bi-second]{name=Fig.,list=no,justification=centering,labelsep=quad}  % 英文标题不进目录
+
+
 % 内容区域
 \begin{document}
 
