@@ -177,7 +177,7 @@
 
 \geometry{
   paper      = a4paper,
-  vmargin    = {30mm, 33mm},
+  vmargin    = {30mm, 30mm},
   hmargin    = 27.2mm,
   headheight = 15mm,
   headsep    = 0.81cm,
