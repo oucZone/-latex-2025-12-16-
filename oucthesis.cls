@@ -166,13 +166,22 @@
 %   headsep    = 0.29cm,
 %   footskip   = 0.79cm,
 % }
+%\geometry{
+%  paper      = a4paper,
+%  vmargin    = 2.7cm,
+%  hmargin    = 2.7cm,
+%  headheight = 0.75cm,
+%  headsep    = 0.56cm,
+%  footskip   = 0.79cm,
+%}
+
 \geometry{
   paper      = a4paper,
-  vmargin    = 2.7cm,
-  hmargin    = 2.7cm,
-  headheight = 0.75cm,
-  headsep    = 0.56cm,
-  footskip   = 0.79cm,
+  vmargin    = {30mm, 33mm},
+  hmargin    = 27.2mm,
+  headheight = 15mm,
+  headsep    = 0.81cm,
+  footskip   = 1.1cm,
 }
 
 \pagestyle{fancy}
