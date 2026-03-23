@@ -37,7 +37,9 @@
 
 14.修复**latex默认页面底部对齐，导致拉伸出现段间距过大的问题**，在\begin{document}前面加入\raggedbottom。
 
-15.修复**参考文献title不是首字母大写标准格式的问题**，在oucauthoryear.bst中禁用自动大小写转换，标题保持BibTeX 数据库中输入的原始大小写格式。
+15.修复**参考文献title会自动变成句子首字母大写的问题**，在oucauthoryear.bst中禁用自动大小写转换，题目会保持BibTeX数据库中原始大小写格式。
+
+16.修复**URL优先：如果URL和DOI同时存在且DOI在URL字段内，则不显示DOI，只显示URL的问题**，改为**DOI优先，如果URL和DOI同时存在，只显示DOI，如果只有URL就显示URL**。
 ...
 
 ## 如何使用
