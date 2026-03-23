@@ -43,7 +43,7 @@ FUNCTION {load.config}
 {
   #0 'uppercase.name :=
   #3 'max.num.authors :=
-  #1 'sentence.case.title :=
+  #0 'sentence.case.title := %0是禁用自动大小写转换，标题会保持 BibTeX 数据库中输入的原始大小写格式。
   #0 'link.title :=
   #1 'show.mark :=
   #1 'slash.for.extraction :=
