@@ -1239,7 +1239,8 @@ FUNCTION {format.doi}
                 { s tmp.str * 's := }
                 'skip$
               if$
-              s empty$ s is.in.url or
+              % s empty$ s is.in.url or
+              s empty$ %移除了 "s is.in.url or"，取消“DOI是否包括在URL中”的判断，也就是DOI和URL都显示
                 'skip$
                 { numnames #1 + 'numnames :=
                   numnames #1 >
@@ -1265,6 +1266,7 @@ FUNCTION {format.doi}
     'skip$
   if$
 }
+
 
 FUNCTION {check.electronic}
 { "" 'entry.url :=
@@ -1399,8 +1401,12 @@ FUNCTION {article}
   format.journal.number "" output.after
   format.journal.pages "" output.after
   format.urldate "" output.after
-  format.url output
-  format.doi output
+  % format.url output  %被替换成下面的条件语句
+  % format.doi output  %被替换成下面的条件语句
+  doi empty$
+    { format.url output }     % 没有DOI时显示URL
+    { format.doi output }     % 有DOI时只显示DOI
+  if$
   new.block
   format.note output
   fin.entry
