@@ -1358,8 +1358,12 @@ FUNCTION {incollection}
   format.year "year" output.check
   format.pages bbl.colon output.after
   format.urldate "" output.after
-  format.url output
-  format.doi output
+  % format.url output  %被替换成下面的条件语句
+  % format.doi output  %被替换成下面的条件语句
+  doi empty$
+    { format.url output }     % 没有DOI时显示URL
+    { format.doi output }     % 有DOI时只显示DOI
+  if$
   new.block
   format.note output
   fin.entry
@@ -1379,8 +1383,12 @@ FUNCTION {periodical}
   format.address.publisher output
   format.date "year" output.check
   format.urldate "" output.after
-  format.url output
-  format.doi output
+  % format.url output  %被替换成下面的条件语句
+  % format.doi output  %被替换成下面的条件语句
+  doi empty$
+    { format.url output }     % 没有DOI时显示URL
+    { format.doi output }     % 有DOI时只显示DOI
+  if$
   new.block
   format.note output
   fin.entry
@@ -1423,8 +1431,12 @@ FUNCTION {patent}
   new.block
   format.date "year" output.check
   format.urldate "" output.after
-  format.url output
-  format.doi output
+  % format.url output  %被替换成下面的条件语句
+  % format.doi output  %被替换成下面的条件语句
+  doi empty$
+    { format.url output }     % 没有DOI时显示URL
+    { format.doi output }     % 有DOI时只显示DOI
+  if$
   new.block
   format.note output
   fin.entry
