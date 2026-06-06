@@ -1245,7 +1245,8 @@ FUNCTION {format.doi}
                 { numnames #1 + 'numnames :=
                   numnames #1 >
                     { ", " * }
-                    { "DOI: " * }
+                    %{ "DOI: " * }%DOI三个字母用大写显示
+                    { "doi: " * }%DOI三个字母用大写显示改为“用小写显示”
                   if$
                   "\doi{" s * "}" * *
                 }
